@@ -80,9 +80,13 @@ function draw() {
 
   if(keyDown(RIGHT_ARROW)){
 	helicopterSprite.x = helicopterSprite.x + 5;
+	translation={x:5,y:0}; 
+	Matter.Body.translate(packageBody, translation);
   }
   if(keyDown(LEFT_ARROW)){
 	helicopterSprite.x = helicopterSprite.x - 5;
+	translation={x:-5,y:0};
+	Matter.Body.translate(packageBody, translation)
   }
   
   drawSprites();
